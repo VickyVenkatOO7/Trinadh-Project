@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+	th:replace="~{base::Layout(~{::section})}">
+<head>
+<meta charset="ISO-8859-1">
+<title>Registration</title>
+</head>
+<body>
+	<section>
+		<div class="container p-3">
+			<div class="row">
+				<div class="col-md-6 offset-md-3">
+					<div class="card">
+						<div class="card-header text-center fs-4">Registration Page</div>
+
+<!-- 						<div th:if="${session.msg}" class="text-center fs-text-success"> -->
+<!--     						<p th:text="${session.msg}"></p> -->
+<!-- 						</div> -->
+						
+						
+						
+							<div class="card-body">
+								<form action="addUser" method="post">
+									<div class="mb-3">
+										<label>First Name:</label><br>
+										<input type="text" class="form-control" placeholder="Enter First Name" name="firstname" id="firstname"><br>
+									</div>
+			
+									<div class="mb-3">
+										<label>Last Name:</label><br>
+										<input type="text" class="form-control" placeholder="Enter Last Name" name="lastname" id="lastname"><br>
+									</div>
+
+									<div class="mb-3">
+										<label>E-mail:</label><br>
+										<input type="email" class="form-control" placeholder="Enter E-mail" name="email" id="email"><br>
+									</div>
+			
+									<div class="mb-3">
+										<label>Password:</label><br>
+										<input type="password" class="form-control" placeholder="Enter Password" name="password" id="password"><br>
+									</div>
+			
+									<div class="mb-3">
+										<label>PhoneNo:</label><br>
+										<input type="number" class="form-control" placeholder="Enter PhoneNo" name="phoneno" id="phoneno"><br>
+									</div>
+			
+									<div class="mb-4">
+										<label>Gender:</label><br>
+										<input type="radio" name="gender" id="male" value="Male">
+										<label>Male</label>
+										<input type="radio" name="gender" id="female" value="Female">
+										<label>Female</label>
+										<input type="radio" name="gender" id="others" value="Others">
+										<label>Others</label>
+									</div>
+									
+									<div class="mb-3">
+										<label>Qualification:</label><br>
+										<input type="text" class="form-control" placeholder="Enter Qualification" name="qualification" id="qualification"><br>
+									</div>
+									
+									<div>
+										<button class="btn btn-primary col-md-12">Register</button>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+	</section>
+</body>
+</html>
