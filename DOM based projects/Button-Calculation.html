@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Dom Practice</title>
+
+    <link rel="stylesheet" href="Styles/Button-Calculation.css">
+</head>
+
+<body>
+    <p>YouTube Subscribe Button</p>
+    <button onclick="subscribe()" class="subscribe-button">
+        Subscribe
+    </button>
+
+    <p>Amazon Shipping Calculator</p>
+    <input type="text" placeholder="Cost of order" class="js-cost-input cost-input" onkeydown="handleKeyDown(event)">
+    <button onclick="
+        calcualateTotal();
+    " class="calculate-button">
+        Calculate
+    </button>
+    <p class="js-total-cost total-cost"></p>
+
+    <p class="textBox-update">TextBox Update</p>
+    <input type="text" placeholder="Type here" class="js-text-autoupdate" onkeyup="handleAutoUpdateText()">
+    <p class="js-updated-text"></p>
+
+    <script src="Scripts/Button-Calculation.js"></script>
+</body>
+
+</html>
