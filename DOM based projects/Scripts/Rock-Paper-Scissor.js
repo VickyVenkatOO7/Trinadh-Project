@@ -22,6 +22,53 @@ function pickComputerMove() {
     return computerMove;
 }
 
+document.querySelector('.js-autoplay-button')
+    .addEventListener('click', () => {
+        autoPlay();
+    });
+
+let isAutoPlaying = false;
+let intervalId;
+function autoPlay() {
+    if (!isAutoPlaying) {
+        intervalId = setInterval(() => {
+            const playerMove = pickComputerMove();
+            playgame(playerMove);
+        }, 1000);
+        isAutoPlaying = true;
+        document.querySelector('.autoPlay').innerHTML = 'Stop';
+    } else {
+        clearInterval(intervalId);
+        isAutoPlaying = false;
+        document.querySelector('.autoPlay').innerHTML = 'Auto Play';
+    }
+}
+
+document.querySelector('.js-rock-button')
+    .addEventListener('click', () => {
+        playgame('rock');
+    });
+
+document.querySelector('.js-paper-button')
+    .addEventListener('click', () => {
+        playgame('paper');
+    });
+    
+document.querySelector('.js-scissors-button')
+    .addEventListener('click', () => {
+        playgame('scissors');
+    });
+
+document.body.addEventListener('keydown', (event) => {
+    if (event.key === 'r') {
+        playgame('rock');
+    } else if (event.key === 'p') {
+        playgame('paper');
+    } else if (event.key === 's') {
+        playgame('scissors');
+    }
+});
+
 function playgame(playerMove) {
     const computerMove = pickComputerMove();
 
