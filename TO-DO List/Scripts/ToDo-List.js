@@ -52,6 +52,7 @@ function addTodo() {
     localStorage.setItem('todoList', JSON.stringify(todoList));
 
     inputElement.value = '';
+    dateInputElement.value='';
 
     renderTodoList();
 }
